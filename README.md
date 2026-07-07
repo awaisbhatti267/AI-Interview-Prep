@@ -1,4 +1,4 @@
-# 🧠 AI Interview Prep Platform
+# 🧠 AI Interview Prep Platform V 1.0
 
 An AI-powered interview preparation platform that helps you practice technical and HR interviews, extract skills from your resume, get real-time AI feedback, and track your performance over time.
 
