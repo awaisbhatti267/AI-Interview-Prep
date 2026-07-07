@@ -1,0 +1,457 @@
+/* ── Practice Interview page ─────────────────────── */
+.pi-page {
+    max-width: 780px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── Shared spinner ──────────────────────────────── */
+.pi-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Shared button ───────────────────────────────── */
+.pi-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pi-btn.primary {
+    background: #7c3aed;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.3);
+    width: 100%;
+    justify-content: center;
+}
+
+.pi-btn.primary:hover:not(:disabled) {
+    background: #6d28d9;
+}
+
+.pi-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ── Step 1: Topic selection ─────────────────────── */
+.pi-step {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.pi-step-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.pi-step-icon {
+    width: 64px;
+    height: 64px;
+    background: #f5f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c3aed;
+    margin: 0 auto 16px;
+}
+
+.pi-step-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px;
+}
+
+.pi-step-header p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* ── Form ────────────────────────────────────────── */
+.pi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pi-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pi-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.pi-field input[type='text'] {
+    height: 44px;
+    padding: 0 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pi-field input[type='text']:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+}
+
+.pi-error {
+    font-size: 12px;
+    color: #ef4444;
+    font-weight: 500;
+}
+
+/* ── Range slider ────────────────────────────────── */
+.pi-range {
+    width: 100%;
+    accent-color: #7c3aed;
+    cursor: pointer;
+}
+
+.pi-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* ── Topic suggestions ───────────────────────────── */
+.pi-suggestions p {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.pi-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pi-tag {
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1.5px solid #e5e7eb;
+    background: #fff;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.pi-tag:hover {
+    border-color: #7c3aed;
+    color: #7c3aed;
+    background: #f5f3ff;
+}
+
+.pi-tag.active {
+    border-color: #7c3aed;
+    background: #ede9fe;
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+/* ── Step 2: Session ─────────────────────────────── */
+.pi-session {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pi-progress-wrap {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.pi-progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.pi-progress-bar {
+    height: 6px;
+    background: #f3f4f6;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.pi-progress-fill {
+    height: 100%;
+    background: #7c3aed;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+}
+
+/* ── Question card ───────────────────────────────── */
+.pi-question-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pi-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    position: relative;
+}
+
+.pi-q-number {
+    width: 36px;
+    height: 36px;
+    background: #ede9fe;
+    color: #7c3aed;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.pi-question p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    flex: 1;
+    line-height: 1.6;
+}
+
+.pi-bookmark-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 4px;
+    border-radius: 6px;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.pi-bookmark-btn:hover { color: #7c3aed; }
+
+/* ── Answer textarea ─────────────────────────────── */
+.pi-answer-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pi-answer {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pi-answer:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+}
+
+/* ── Feedback ────────────────────────────────────── */
+.pi-feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pi-score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.pi-score-badge.good  { background: #dcfce7; color: #16a34a; }
+.pi-score-badge.fair  { background: #fef9c3; color: #ca8a04; }
+.pi-score-badge.poor  { background: #fef2f2; color: #ef4444; }
+
+.pi-feedback-section {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.pi-feedback-section h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 8px;
+}
+
+.pi-feedback-section p {
+    font-size: 14px;
+    color: #374151;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pi-feedback-section.ideal {
+    background: #f5f3ff;
+    border-left: 3px solid #7c3aed;
+}
+
+.pi-user-answer {
+    font-style: italic;
+    color: #6b7280 !important;
+}
+
+/* ── Step 3: Results ─────────────────────────────── */
+.pi-results {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pi-results-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.pi-results-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.pi-results-header p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.pi-final-score {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 8px 0 0;
+}
+
+.pi-score-label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ── Review ──────────────────────────────────────── */
+.pi-answers-review h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 12px;
+}
+
+.pi-review-row {
+    border: 1px solid #f3f4f6;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #f9fafb;
+}
+
+.pi-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.pi-review-q {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    flex: 1;
+}
+
+.pi-review-score {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.pi-review-score.good  { background: #dcfce7; color: #16a34a; }
+.pi-review-score.fair  { background: #fef9c3; color: #ca8a04; }
+.pi-review-score.poor  { background: #fef2f2; color: #ef4444; }
+
+.pi-review-answer {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+    .pi-step, .pi-question-card, .pi-results {
+        padding: 20px 16px;
+    }
+}

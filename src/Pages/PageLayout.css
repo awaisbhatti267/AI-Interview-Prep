@@ -1,0 +1,45 @@
+/* ── Shared page layout ───────────────────────────── */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: #f9fafb;
+}
+
+/* ── Page header ─────────────────────────────────── */
+.page-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* ── Page body ───────────────────────────────────── */
+.page-body {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ── Mobile: push content below fixed navbar ─────── */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 80px; /* 56px navbar + 24px spacing */
+    }
+}

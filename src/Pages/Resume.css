@@ -1,0 +1,303 @@
+/* ── Resume page ─────────────────────────────────── */
+.resume-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 860px;
+}
+
+/* ── Loading ─────────────────────────────────────── */
+.resume-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 60px 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ── Spinner ─────────────────────────────────────── */
+.resume-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ede9fe;
+    border-top-color: #7c3aed;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+.resume-spinner.large {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Dropzone ────────────────────────────────────── */
+.resume-upload-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resume-dropzone {
+    border: 2px dashed #d1d5db;
+    border-radius: 16px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background: #fff;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    text-align: center;
+}
+
+.resume-dropzone:hover {
+    border-color: #7c3aed;
+    background: #faf8ff;
+}
+
+.resume-dropzone.drag-over {
+    border-color: #7c3aed;
+    background: #f5f3ff;
+}
+
+.resume-dropzone.uploading {
+    cursor: default;
+    background: #faf8ff;
+    border-color: #c4b5fd;
+}
+
+.dropzone-icon {
+    width: 72px;
+    height: 72px;
+    background: #f5f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.dropzone-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.dropzone-sub {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.dropzone-sub span {
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.dropzone-hint {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 4px 0 0;
+}
+
+.dropzone-uploading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── Error ───────────────────────────────────────── */
+.resume-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+/* ── Resume card (uploaded state) ───────────────── */
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resume-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.resume-file-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.resume-file-icon {
+    width: 52px;
+    height: 52px;
+    background: #f5f3ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resume-filename {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+}
+
+.resume-uploaded {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.resume-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 99px;
+    flex-shrink: 0;
+}
+
+.resume-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.resume-btn.outline {
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    color: #374151;
+}
+
+.resume-btn.outline:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+/* ── Extracted skills ────────────────────────────── */
+.skills-extracted {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.skills-extracted-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.skills-extracted-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.skills-extracted-header h3 span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9ca3af;
+    margin-left: 6px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skill-chip-name {
+    font-weight: 600;
+}
+
+.skill-chip-level {
+    font-size: 11px;
+    opacity: 0.75;
+    border-left: 1px solid currentColor;
+    padding-left: 8px;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+    .resume-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-dropzone {
+        padding: 40px 20px;
+    }
+
+    .resume-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,33 @@
+/* ── Header (inside sidebar) ─────────────────────── */
+.header {
+    padding: 20px 16px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-icon {
+    color: #7c3aed;
+    flex-shrink: 0;
+}
+
+.header-text h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
+
+.header-text p {
+    font-size: 11px;
+    color: #9ca3af;
+    margin: 0;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}

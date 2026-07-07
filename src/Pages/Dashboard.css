@@ -1,0 +1,579 @@
+/* ── Dashboard wrapper ───────────────────────────── */
+.dashboard-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 24px 28px;
+    overflow-y: auto;
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ── Stat Cards ──────────────────────────────────── */
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-card-donut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+.stat-tag.good {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.trend-up {
+    color: #16a34a;
+}
+
+.trend-label {
+    color: #9ca3af;
+}
+
+.stat-next {
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ── Sparkline ───────────────────────────────────── */
+.sparkline {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 32px;
+    margin-top: 4px;
+}
+
+.spark-bar {
+    flex: 1;
+    border-radius: 3px 3px 0 0;
+    min-height: 4px;
+    opacity: 0.7;
+}
+
+/* ── Middle row ──────────────────────────────────── */
+.dashboard-mid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ── Dashboard cards ─────────────────────────────── */
+.dash-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dash-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-card-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.dash-card-label {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.view-all {
+    font-size: 13px;
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* ── Skills ──────────────────────────────────────── */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.skill-icon {
+    font-size: 16px;
+    width: 24px;
+    text-align: center;
+}
+
+.skill-name {
+    font-size: 13px;
+    color: #374151;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.skill-bar-wrap {
+    flex: 1;
+    height: 7px;
+    background: #f3f4f6;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.6s ease;
+}
+
+.skill-score {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* ── View button ─────────────────────────────────── */
+.dash-view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #f5f3ff;
+    color: #7c3aed;
+    border: 1.5px solid #ede9fe;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+}
+
+.dash-view-btn:hover {
+    background: #ede9fe;
+}
+
+.dash-view-btn.outline {
+    background: #fff;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+.dash-view-btn.outline:hover {
+    background: #f9fafb;
+}
+
+/* ── Recent Interviews ───────────────────────────── */
+.recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.recent-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    transition: background 0.15s ease;
+    cursor: pointer;
+}
+
+.recent-row:hover {
+    background: #f9fafb;
+}
+
+.recent-icon {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.recent-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recent-meta {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.recent-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.recent-score {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recent-date {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.score-green { color: #16a34a; }
+.score-orange { color: #d97706; }
+.score-red { color: #ef4444; }
+
+/* ── Bottom row ──────────────────────────────────── */
+.dashboard-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ── Resume Status ───────────────────────────────── */
+.resume-status-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.resume-check {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #dcfce7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resume-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-analyzed {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 2px;
+}
+
+.resume-analyzed span {
+    color: #16a34a;
+}
+
+.resume-filename {
+    font-size: 12px;
+    color: #374151;
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resume-date {
+    font-size: 11px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* ── Weak Areas ──────────────────────────────────── */
+.weak-subtitle {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: -8px 0 0;
+}
+
+.weak-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.weak-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #f3f4f6;
+}
+
+.weak-topic {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.weak-score {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.weak-practice {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7c3aed;
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.weak-practice:hover {
+    text-decoration: underline;
+}
+
+/* ── CTA Banner ──────────────────────────────────── */
+.cta-banner {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    border: 1.5px solid #ddd6fe;
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cta-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cta-icon {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.cta-left h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+}
+
+.cta-left p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.cta-btn.primary {
+    background: #7c3aed;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.3);
+}
+
+.cta-btn.primary:hover {
+    background: #6d28d9;
+}
+
+.cta-btn.outline {
+    background: #fff;
+    color: #374151;
+    border: 1.5px solid #e5e7eb;
+}
+
+.cta-btn.outline:hover {
+    background: #f9fafb;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1100px) {
+    .stat-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-mid,
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 16px;
+        padding-top: 80px;
+    }
+
+    .stat-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .cta-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        justify-content: center;
+    }
+
+    .skill-meta {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-cards {
+        grid-template-columns: 1fr;
+    }
+}
