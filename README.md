@@ -2,7 +2,7 @@
 
 An AI-powered interview preparation platform that helps you practice technical and HR interviews, extract skills from your resume, get real-time AI feedback, and track your performance over time.
 
-![Platform Preview](src/assets/hero.png)
+
 
 ---
 
